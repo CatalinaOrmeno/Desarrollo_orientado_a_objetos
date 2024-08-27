@@ -32,11 +32,11 @@ public class FarmaciaComunitaria {
         
         //2.Creando cliente:
         Cliente c1 = new Cliente("1234", "Juan", m2.getNombre());
-        /*m2.imprimir();
+        m2.imprimir();
         m2.vender(c1);
         m2.imprimir();
         c1.realizarCompra(m2);
-        m2.imprimir();*/
+        m2.imprimir();
     }
     
 }
