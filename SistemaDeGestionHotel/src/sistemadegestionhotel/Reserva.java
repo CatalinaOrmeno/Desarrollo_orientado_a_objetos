@@ -83,5 +83,16 @@ public class Reserva {
         return "Reserva{" + "numeroReserva=" + numeroReserva + ", numeroHabitacion=" + numeroHabitacion + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", precioTotal=" + precioTotal + '}';
     }
     
+    public void calcularPrecioTotal(double precioPorNoche,int noches){
+        setPrecioTotal(precioPorNoche * noches);
+        System.out.println("...Listo!");
+    }
     
+    public void mostrarDetallesReserva(){
+        System.out.println("Número de reserva: " + numeroReserva);
+        System.out.println("Número de habitación: " + numeroHabitacion);
+        System.out.println("Fecha de entrada: " + fechaEntrada);
+        System.out.println("Fecha de salida: " + fechaSalida);
+        System.out.println("Precio total: " + precioTotal);
+    }
 }

@@ -82,5 +82,11 @@ public class Cliente {
         return "Cliente{" + "idCliente=" + idCliente + ", nombre=" + nombre + ", apellido=" + apellido + ", esMiembro=" + esMiembro + ", genero=" + genero + '}';
     }
     
-    
+    public void mostrarDatosCliente(){
+        System.out.println("ID del cliente: " + idCliente);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("¿Es miembro?: " + esMiembro);
+        System.out.println("Género: " + genero);
+    }
 }

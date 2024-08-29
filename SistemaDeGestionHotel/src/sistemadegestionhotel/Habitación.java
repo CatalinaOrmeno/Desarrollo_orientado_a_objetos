@@ -95,6 +95,10 @@ public class Habitación {
         System.out.println("Tamaño: " + tamanio);
     }
     public void cambiarDisponibilidad(){
-        if (disponibilidad)
+        if (disponibilidad == true){
+            setDisponibilidad(false);
+        }else{
+            setDisponibilidad(true);
+        }
     }
 }
