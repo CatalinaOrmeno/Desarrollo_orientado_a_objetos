@@ -50,8 +50,8 @@ public class Cliente {
     }
 
     public void setApellido(String apellido) {
-        if (nombre.trim().length() >= 3){
-            this.nombre = nombre;
+        if (apellido.trim().length() >= 3){
+            this.apellido = apellido;
         }else{
             System.err.println("ERROR: el nombre tiene que tener minimo 3 letras");
         }
