@@ -70,7 +70,7 @@ public class Cliente {
     }
 
     public void setGenero(char genero) {
-        if(genero == 'F' || genero == 'M' || genero == 'O'){
+        if(genero == 'F' ||genero == 'f'|| genero == 'M'|| genero == 'm' || genero == 'O'|| genero == 'o'){
             this.genero = genero;
         }else{
             System.err.println("ERROR: el genero solo puede ser Femenino(F), Masculino(M) o Otro(O)");
@@ -88,5 +88,13 @@ public class Cliente {
         System.out.println("Apellido: " + apellido);
         System.out.println("¿Es miembro?: " + esMiembro);
         System.out.println("Género: " + genero);
+    }
+    
+    public void aplicarDescuentoMiembro(double porcentajeDescuento){
+        if (esMiembro){
+            System.out.println("El cliente ID:"+idCliente+" tiene un descuento disponible del " + porcentajeDescuento + '%');
+        }else{
+            System.out.println("El cliente ID:"+idCliente+" no tiene ningun descuento aplicable");
+        }
     }
 }

@@ -6,7 +6,7 @@ package sistemadegestionhotel;
 
 /**
  *
- * @author PAAPCA02LC1007
+ * @author Catalina
  */
 public class Habitación {
     private int numeroHabitacion;
@@ -46,7 +46,7 @@ public class Habitación {
         if(precioPorNoche >= 0){
             this.precioPorNoche = precioPorNoche;
         }else{
-            System.err.println("ERROR: tiene que ser un número igual o mayor a 0.");
+            System.err.println("ERROR: Precio por noche invalido, tiene que ser un número igual o mayor a 0.");
         }
     }
 
@@ -56,6 +56,11 @@ public class Habitación {
 
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
+        if (disponibilidad){
+            System.out.println("Habitación "+ numeroHabitacion +" actualmente disponible");
+        }else{
+            System.out.println("Habitación "+ numeroHabitacion +" actualmente no disponible");
+        }
     }
 
     public char getTipoHabitacion() {
@@ -63,7 +68,7 @@ public class Habitación {
     }
 
     public void setTipoHabitacion(char tipoHabitacion) {
-        if(tipoHabitacion == 'S' || tipoHabitacion == 'D'){
+        if(tipoHabitacion == 'S' ||tipoHabitacion == 's'|| tipoHabitacion == 'D' || tipoHabitacion == 'd'){
             this.tipoHabitacion = tipoHabitacion;
         }else{
             System.err.println("ERROR: la habitación solo puede ser Simple(S) o Doble(D)");
@@ -89,10 +94,18 @@ public class Habitación {
     
     public void mostrarDetalles(){
         System.out.println("Número de habitación: " + numeroHabitacion);
-        System.out.println("Precio por noche: " + precioPorNoche);
-        System.out.println("Disponibilidad: " + disponibilidad);
-        System.out.println("Tipo: " + tipoHabitacion);
-        System.out.println("Tamaño: " + tamanio);
+        System.out.println("Precio por noche: $" + precioPorNoche);
+        if(disponibilidad){
+            System.out.println("Disponibilidad: Si");
+        }else{
+            System.out.println("Disponibilidad: No");
+        }
+        if(tipoHabitacion == 'S' ||tipoHabitacion == 's'){
+            System.out.println("Tipo: Simple");
+        }else{       
+            System.out.println("Tipo: Doble");
+        }
+        System.out.println("Tamaño: " + tamanio + "m^2");
     }
     public void cambiarDisponibilidad(){
         if (disponibilidad == true){
