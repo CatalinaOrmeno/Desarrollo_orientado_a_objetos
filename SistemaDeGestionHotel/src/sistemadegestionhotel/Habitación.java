@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sistemadegestionhotel;
 
 /**
@@ -105,7 +101,7 @@ public class Habitación {
         }else{       
             System.out.println("Tipo: Doble");
         }
-        System.out.println("Tamaño: " + tamanio + "m^2");
+        System.out.println("Tamaño: " + tamanio + "m^2\n");
     }
     public void cambiarDisponibilidad(){
         if (disponibilidad == true){

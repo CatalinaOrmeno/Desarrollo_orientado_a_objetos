@@ -90,9 +90,10 @@ public class Cliente {
         System.out.println("Género: " + genero);
     }
     
-    public void aplicarDescuentoMiembro(double porcentajeDescuento){
+    public void aplicarDescuentoMiembro(double porcentajeDescuento,Reserva r){
         if (esMiembro){
             System.out.println("El cliente ID:"+idCliente+" tiene un descuento disponible del " + porcentajeDescuento + '%');
+            r.setPrecioTotal(r.getPrecioTotal() * porcentajeDescuento);
         }else{
             System.out.println("El cliente ID:"+idCliente+" no tiene ningun descuento aplicable");
         }

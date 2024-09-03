@@ -10,6 +10,8 @@ public class Reserva {
     private int numeroReserva, numeroHabitacion;
     private Date fechaEntrada, fechaSalida;
     private double precioTotal;
+    private Habitación habitación;
+    private Cliente cliente;
 
     public Reserva() {
     }
@@ -83,9 +85,10 @@ public class Reserva {
         return "Reserva{" + "numeroReserva=" + numeroReserva + ", numeroHabitacion=" + numeroHabitacion + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", precioTotal=" + precioTotal + '}';
     }
     
-    public void calcularPrecioTotal(double precioPorNoche,int noches){
-        setPrecioTotal(precioPorNoche * noches);
-        System.out.println("...Listo!");
+    public void calcularPrecioTotal(int noches){
+        setPrecioTotal(habitación.getPrecioPorNoche() * noches);
+        cliente.aplicarDescuentoMiembro(0.9, this);
+        System.out.println("Calculo de precio total completado!\n");
     }
     
     public void mostrarDetallesReserva(){
